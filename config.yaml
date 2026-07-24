@@ -1,0 +1,91 @@
+# ============================================================
+# SBCNet configuration aligned with the manuscript
+# ============================================================
+
+# ------------------------------------------------------------
+# Training settings
+# ------------------------------------------------------------
+
+batch_size: 16
+batch_size_valid: 16
+
+epochs: 130
+lr: 0.00005
+
+# The manuscript uses Adam without reporting weight decay.
+weight_decay: 0.0
+
+# Reproducibility setting; the manuscript does not report a seed.
+rand_seed: 42
+
+# Disable training strategies not reported in the manuscript.
+precisionHigh: false
+amp_dtype: fp32
+accumulation_steps: 1
+
+# ------------------------------------------------------------
+# Dataset
+# ------------------------------------------------------------
+
+train_dir: "./COD_Dataset/TrainDataset"
+test_dir: "./COD_Dataset/TestDataset"
+
+# CAMO-train and COD10K-train are combined for training.
+load_all: false
+
+# Input images are resized to 352 × 352.
+img_size: 352
+
+# Random data augmentation reported in the manuscript.
+preproc_methods:
+  - flip
+  - rotate
+  - crop
+
+# ------------------------------------------------------------
+# Model
+# ------------------------------------------------------------
+
+# Pre-trained PVTv2-B3 backbone.
+backbone: "pvt_v2_b3"
+
+# PVTv2-B3 multi-level output channels.
+lateral_channels: [512, 320, 128, 64]
+
+# Unified feature channel dimension.
+inter_channel: 128
+
+# The paper-aligned model uses Group Normalization internally.
+weights:
+  pvt_v2_b3: "./weights/pvt_v2_b3.pth"
+
+# ------------------------------------------------------------
+# Resume
+# ------------------------------------------------------------
+
+resume: ""
+
+# ------------------------------------------------------------
+# Device
+# ------------------------------------------------------------
+
+device_ids: [0]
+multi_GPU: false
+compile: false
+
+# ------------------------------------------------------------
+# Checkpoint output
+# ------------------------------------------------------------
+
+save_model_dir: "checkpoints"
+name: "SBCNet"
+
+# Checkpoint frequency is an engineering setting and does not affect
+# the training strategy reported in the manuscript.
+save_step: 10
+
+# ------------------------------------------------------------
+# DataLoader
+# ------------------------------------------------------------
+
+num_workers: 4
