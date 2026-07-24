@@ -2,7 +2,7 @@
 
 This repository contains the pre-trained Model weights, code, and instructions for obtaining the datasets used in our paper:
 
-SBCNet: Semantic Boundary Coupling Network for Camouflaged Object Detection (*Journal of Electronic Imaging*)
+SBCNet: Semantic Boundary Coupling Network for Camouflaged Object Detection 
 
 ## Pre-Trained Model
 
