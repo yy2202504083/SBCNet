@@ -6,7 +6,7 @@ SBCNet: Semantic Boundary Coupling Network for Camouflaged Object Detection (*Jo
 
 ## Pre-Trained Model
 
-The pre-trained PVTv2-B3 model can be downloaded from:  
+The pre-trained model can be found on 
 [https://pan.baidu.com/s/xxxxxxxxxxxxxxxx](https://pan.baidu.com/s/xxxxxxxxxxxxxxxx)  
 (code: xxxx)
 
