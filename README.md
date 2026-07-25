@@ -6,7 +6,7 @@ SBCNet: semantic–boundary coupling network for camouflaged object detection
 
 ## Pre-Trained Model
 
-The pre-trained SBCNet model is available on [Google Drive](https://drive.usercontent.google.com/download?id=1QrQ4hGuqmHpHqabPpYvB1FbN7jci1phg&export=download&authuser=0).
+The pre-trained baseline model weight is available on [Google Drive](https://drive.usercontent.google.com/download?id=1QrQ4hGuqmHpHqabPpYvB1FbN7jci1phg&export=download&authuser=0).
 
 ## Datasets
 
